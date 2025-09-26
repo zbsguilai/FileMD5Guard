@@ -1,6 +1,14 @@
 # FileMD5Guard - 文件重复检测工具
 
 一个基于 React + TypeScript + Vite 构建的智能文件重复检测应用，使用 MD5 哈希算法快速识别重复文件，提供直观的可视化界面和完整的历史记录管理功能。
+## 页面展示
+
+### 主界面
+![主界面展示](src/assets/image1.png)
+
+### 文件检测结果
+![文件检测结果](src/assets/image2.png)
+
 
 ## 功能特性
 
