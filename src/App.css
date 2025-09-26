@@ -1,0 +1,452 @@
+/* 确保按钮显示的强制样式 */
+.header-right {
+  display: flex !important;
+  align-items: center !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.header-right .ant-space {
+  display: flex !important;
+  align-items: center !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.header-right .ant-space .ant-space-item {
+  display: inline-flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.nav-button, .info-button {
+  display: inline-flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  color: #fff !important;
+}
+
+/* 其他现有样式保持不变 */
+.app-layout {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.app-header {
+  background: rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1000;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 64px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+
+}
+
+.title-section {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nav-button {
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  color: #fff !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.nav-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  color: #fff !important;
+}
+
+.nav-button.ant-btn-primary {
+  background: #1890ff !important;
+  border-color: #1890ff !important;
+}
+
+.nav-button.ant-btn-default {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.info-button {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.info-button:hover {
+  color: #fff !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.app-content {
+  padding: 24px;
+  min-height: calc(100vh - 64px);
+}
+
+.content-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* 上传区域样式 */
+.upload-card {
+  margin-bottom: 24px;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.file-upload-container {
+  padding: 20px;
+}
+
+/* 重新设计上传拖拽区域样式 - 去掉虚线，保留光效 */
+.upload-dragger {
+  border: none !important;
+  border-radius: 12px !important;
+  background: linear-gradient(135deg, #f8f9ff 0%, #e8f4ff 100%) !important;
+  transition: all 0.3s ease !important;
+  position: relative !important;
+  overflow: hidden !important;
+  padding: 60px 20px !important;
+  margin: 0 !important;
+  box-shadow: 0 4px 20px rgba(24, 144, 255, 0.1) !important;
+}
+
+.upload-dragger:hover {
+  background: linear-gradient(135deg, #e6f7ff 0%, #d6f0ff 100%) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 30px rgba(24, 144, 255, 0.2) !important;
+}
+
+.upload-dragger::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: -100% !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent) !important;
+  transition: left 0.6s !important;
+  z-index: 1 !important;
+}
+
+.upload-dragger:hover::before {
+  left: 100% !important;
+}
+
+.upload-dragger .ant-upload-drag-icon {
+  margin-bottom: 20px !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.upload-dragger .ant-upload-text {
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  margin-bottom: 12px !important;
+  color: #1890ff !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.upload-dragger .ant-upload-hint {
+  color: #666 !important;
+  font-size: 14px !important;
+  position: relative !important;
+  z-index: 2 !important;
+  line-height: 1.6 !important;
+}
+
+.upload-actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* 文件列表样式 */
+.file-list-card {
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.file-stats {
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #e9ecef;
+}
+
+.stat-item {
+  display: inline-block;
+  margin-right: 24px;
+}
+
+.duplicate-groups {
+  background: #fff2f0;
+  border: 1px solid #ffccc7;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.duplicate-group {
+  background: #fff;
+  border: 1px solid #ffccc7;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 8px;
+}
+
+.duplicate-group:last-child {
+  margin-bottom: 0;
+}
+
+/* 历史记录样式优化 */
+.history-panel {
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  height: fit-content;
+}
+
+/* 覆盖 Ant Design List 的默认 padding */
+.ant-list .ant-list-item {
+  padding: 10px !important;
+}
+
+.history-item {
+  border-radius: 8px;
+  margin-bottom: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  padding: 10px !important;
+}
+
+.history-item:hover {
+  background: #f0f8ff;
+  transform: translateX(4px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.history-item.active {
+  background: #e6f7ff;
+  border: 1px solid #91d5ff;
+  box-shadow: 0 2px 8px rgba(24, 144, 255, 0.2);
+}
+
+/* 历史记录标题和描述样式 */
+.history-title {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+.history-title .ant-typography {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 200px;
+}
+
+.history-description {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.history-stats {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.history-stats .ant-space {
+  width: 100%;
+  overflow: hidden;
+}
+
+.history-stats .ant-space-item {
+  flex-shrink: 0;
+}
+
+.history-time {
+  display: flex;
+  align-items: center;
+}
+
+/* 修改 Antd List 的 action 区域间距 */
+.ant-list .ant-list-item .ant-list-item-action {
+  margin-inline-start: 20px !important;
+}
+
+/* 调整没有头像时的布局 */
+.ant-list-item-meta {
+  margin-left: 0 !important;
+}
+
+.ant-list-item-meta-content {
+  margin-left: 0 !important;
+}
+
+.empty-history {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.empty-history .anticon {
+  margin-bottom: 16px;
+  opacity: 0.6;
+}
+
+/* 空状态样式 */
+.empty-state-card {
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.empty-state .anticon {
+  margin-bottom: 16px;
+  opacity: 0.6;
+}
+
+/* 表格样式优化 */
+.ant-table-thead > tr > th {
+  background: #f8f9fa;
+  border-bottom: 2px solid #e9ecef;
+  font-weight: 600;
+}
+
+.ant-table-tbody > tr:hover > td {
+  background: #f0f8ff;
+}
+
+.ant-table-tbody > tr.duplicate-row > td {
+  background: #fff2f0;
+}
+
+.ant-table-tbody > tr.duplicate-row:hover > td {
+  background: #ffe7e6;
+}
+
+/* 动画效果 */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.upload-card,
+.file-list-card,
+.empty-state-card,
+.history-panel {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .app-content {
+    padding: 16px;
+  }
+  
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .header-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .file-stats {
+    text-align: center;
+  }
+  
+  .stat-item {
+    display: block;
+    margin-bottom: 8px;
+    margin-right: 0;
+  }
+  
+  .upload-dragger {
+    padding: 40px 15px !important;
+  }
+  
+  .history-title .ant-typography {
+    max-width: 150px;
+  }
+  
+  .history-stats {
+    flex-wrap: wrap;
+  }
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
